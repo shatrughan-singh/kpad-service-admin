@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dashboard - Admin</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/images/favicon.png" rel="icon">
+    <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main id="main" class="main">
+        <div class="pagetitle">
+            <h1>Dashboard</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Admin</li>
+                </ol>
+            </nav>
+        </div>
+        <section class="section dashboard">
+
+            <div class="department_section">
+                <div class="rg_rdond">
+                    <div class="blr rd"></div>
+                    <div class="blr grn"></div>
+                    <div class="blr ble"></div>
+                </div>
+                <div class="container">
+                    <div class="heading_2">Add URL & Other Details </div><br><br>
+                </div>
+            </div>
+            <div class="container">
+                <div>
+                    <div>Service URL: <textarea name="textarea" [(ngModel)]="updatedServiceUrl" id="" cols="30" rows="2"></textarea>
+                    </div><br>
+                    <div>Team: <textarea name="textarea" [(ngModel)]="team" id="" cols="30" rows="2"></textarea>
+                    </div><br>
+                    <div>BU: <textarea name="textarea" [(ngModel)]="bu" id="" cols="30" rows="2"></textarea>
+                    </div><br>
+                    <div>Response Time Out: <textarea name="textarea" [(ngModel)]="responseTimeout" id="" cols="30" rows="2"></textarea>
+                    </div><br>
+                    <div>Interval: <textarea name="textarea" [(ngModel)]="interval" id="" cols="30" rows="2"></textarea>
+                    </div><br><br>
+                    <div>Is Maintance: <input type="checkbox" name="isMaintenance" id="isMaintenance"  [(ngModel)]="isMaintenance" [value]="isMaintenance"/>
+                    </div><br><br>
+                    <div>
+                    Deptartment Name: <select name="dept" id="dept" [(ngModel)]="deptName">
+                        <option *ngFor="let d of deptData" value="{{ d.deptName }}">{{ d.deptName }}</option>
+                      </select>
+                      </div>
+                    <br>
+                    <br>
+                    <button (click)="submitData()">Submit Config</button><br><br><br>
+                </div>
+            </div>
+
+            <div class="department_section">
+                <div class="container">
+                    <div class="heading_2">Update Config Urls</div>
+                </div>
+            </div>
+            <div class="container">
+                <div>
+                    <div><textarea name="textarea" [(ngModel)]="agentConfig" id="" cols="60" rows="10"></textarea></div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-xxl-4 col-md-6">
+                            <div class="card info-card sales-card">
+
+                                <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                            class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li><a class="dropdown-item" href="#">Today</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Sales <span>| Today</span></h5>
+
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-cart"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>145</h6>
+                                            <span class="text-success small pt-1 fw-bold">12%</span> <span
+                                                class="text-muted small pt-2 ps-1">increase</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        
+                    </div>
+                </div> 
+            </div> -->
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Admin</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">techqware.com</a>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
